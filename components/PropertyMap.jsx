@@ -53,7 +53,13 @@ const PropertyMap = ({ property }) => {
       }
     };
     fetchCoords();
-  }, []);
+  }, [
+    property.location.street,
+    property.location.city,
+    property.location.state,
+    property.location.zipcode,
+    viewport,
+  ]);
   if (loading) {
     return <Spinner />;
   }

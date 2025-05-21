@@ -27,7 +27,7 @@ const BookmarkButton = ({ property }) => {
       }
       setLoading(false);
     });
-  }, [property._id, userId, checkBookmarkStatus]);
+  }, [property._id, userId]);
 
   const handleClick = async () => {
     if (!userId) {
